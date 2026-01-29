@@ -1,0 +1,55 @@
+<% 
+const body = `
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h2 class="hero-title">CF Grugan</h2>
+            <p class="hero-subtitle">A showcase of happy accidents that led to a leadership role in a field that just barely has a name.</p>
+            <div class="hero-cta">
+                <a href="/career" class="btn btn-primary">View My Career</a>
+                <a href="/community" class="btn btn-secondary">Community Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/images/cfheadshot.png" alt="CF Grugan" class="headshot-image">
+        </div>
+    </div>
+</section>
+
+<section class="preview-sections">
+    <div class="container">
+        <h3 class="section-title">Explore My Work</h3>
+        <div class="preview-grid">
+            <div class="preview-card">
+                <div class="card-icon">💼</div>
+                <h4>Career Achievements</h4>
+                <p>Professional milestones, roles, and accomplishments throughout my career journey.</p>
+                <a href="/career" class="card-link">Learn More →</a>
+            </div>
+            
+            <div class="preview-card">
+                <div class="card-icon">🤝</div>
+                <h4>Dev Community</h4>
+                <p>Contributions to the developer community, open source work, and knowledge sharing.</p>
+                <a href="/community" class="card-link">Learn More →</a>
+            </div>
+            
+            <div class="preview-card">
+                <div class="card-icon">💻</div>
+                <h4>Digital Work</h4>
+                <p>Interactive projects, web applications, and digital experiences I've created.</p>
+                <a href="/digital" class="card-link">Learn More →</a>
+            </div>
+            
+            <div class="preview-card">
+                <div class="card-icon">🎨</div>
+                <h4>Analog Art</h4>
+                <p>Traditional artwork, sketches, and creative pursuits beyond the digital realm.</p>
+                <a href="/analog" class="card-link">Learn More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', { body: body }) %>

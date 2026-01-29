@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="Personal portfolio showcasing career achievements, dev community work, digital projects, and analog art">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1><a href="/">Your Portfolio</a></h1>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/bio" class="nav-link <%= page === 'bio' ? 'active' : '' %>">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/career" class="nav-link <%= page === 'career' ? 'active' : '' %>">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/community" class="nav-link <%= page === 'community' ? 'active' : '' %>">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/digital" class="nav-link <%= page === 'digital' ? 'active' : '' %>">Digital Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/analog" class="nav-link <%= page === 'analog' ? 'active' : '' %>">Analog Art</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <%- body %>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; <%= new Date().getFullYear() %> Your Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <!-- Add your social media links here -->
+                <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+                <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" class="social-link" aria-label="Email">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<% 
+const body = `
+<section class="page-header">
+    <div class="container">
+        <h2 class="page-title">Digital Interaction Work</h2>
+        <p class="page-subtitle">Interactive projects and digital experiences</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="interactive">Interactive</button>
+            <button class="filter-btn" data-filter="tools">Tools</button>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <div class="placeholder-project">Project Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <h3>Web Application Project</h3>
+                    <p>Description of your web application project, technologies used, and key features.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+                        <a href="#" class="btn btn-outline btn-sm">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="interactive">
+                <div class="project-image">
+                    <div class="placeholder-project">Project Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <h3>Interactive Experience</h3>
+                    <p>An engaging interactive project showcasing creative coding and user experience design.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Canvas</span>
+                        <span class="tag">WebGL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary btn-sm">Try It</a>
+                        <a href="#" class="btn btn-outline btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">
+                    <div class="placeholder-project">App Screenshot</div>
+                </div>
+                <div class="project-content">
+                    <h3>Mobile Application</h3>
+                    <p>Mobile app project with focus on user experience and performance optimization.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Redux</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary btn-sm">App Store</a>
+                        <a href="#" class="btn btn-outline btn-sm">Case Study</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="tools">
+                <div class="project-image">
+                    <div class="placeholder-project">Tool Interface</div>
+                </div>
+                <div class="project-content">
+                    <h3>Developer Tool</h3>
+                    <p>Utility tool designed to improve developer productivity and workflow efficiency.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">CLI</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary btn-sm">Download</a>
+                        <a href="#" class="btn btn-outline btn-sm">Documentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', { body: body }) %>

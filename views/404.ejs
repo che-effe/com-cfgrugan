@@ -1,0 +1,27 @@
+<% 
+const body = `
+<section class="error-page">
+    <div class="container">
+        <div class="error-content">
+            <h2 class="error-title">404</h2>
+            <h3 class="error-subtitle">Page Not Found</h3>
+            <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary">Go Home</a>
+                <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
+            </div>
+        </div>
+        <div class="error-suggestions">
+            <h4>Try these instead:</h4>
+            <ul>
+                <li><a href="/career">View Career Achievements</a></li>
+                <li><a href="/community">Explore Community Work</a></li>
+                <li><a href="/digital">See Digital Projects</a></li>
+                <li><a href="/analog">Browse Analog Art</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', { body: body }) %>

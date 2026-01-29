@@ -1,0 +1,109 @@
+<% 
+const body = `
+<section class="page-header">
+    <div class="container">
+        <h2 class="page-title">Analog Art & Interests</h2>
+        <p class="page-subtitle">Creative pursuits beyond the digital realm</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="art-categories">
+            <div class="category-nav">
+                <button class="category-btn active" data-category="all">All Work</button>
+                <button class="category-btn" data-category="drawings">Drawings</button>
+                <button class="category-btn" data-category="paintings">Paintings</button>
+                <button class="category-btn" data-category="sculptures">Sculptures</button>
+                <button class="category-btn" data-category="photography">Photography</button>
+            </div>
+        </div>
+        
+        <div class="art-gallery">
+            <div class="gallery-item" data-category="drawings">
+                <div class="artwork-image">
+                    <div class="placeholder-artwork">Sketch/Drawing</div>
+                </div>
+                <div class="artwork-info">
+                    <h3>Artwork Title</h3>
+                    <p class="artwork-medium">Pencil on Paper</p>
+                    <p class="artwork-date">2024</p>
+                    <p class="artwork-description">Brief description of the artwork, inspiration, or technique used.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="paintings">
+                <div class="artwork-image">
+                    <div class="placeholder-artwork">Painting</div>
+                </div>
+                <div class="artwork-info">
+                    <h3>Painting Title</h3>
+                    <p class="artwork-medium">Acrylic on Canvas</p>
+                    <p class="artwork-date">2023</p>
+                    <p class="artwork-description">Description of this painting and what inspired it.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="photography">
+                <div class="artwork-image">
+                    <div class="placeholder-artwork">Photograph</div>
+                </div>
+                <div class="artwork-info">
+                    <h3>Photo Title</h3>
+                    <p class="artwork-medium">Digital Photography</p>
+                    <p class="artwork-date">2024</p>
+                    <p class="artwork-description">Story behind this photograph and capture details.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="sculptures">
+                <div class="artwork-image">
+                    <div class="placeholder-artwork">Sculpture</div>
+                </div>
+                <div class="artwork-info">
+                    <h3>Sculpture Title</h3>
+                    <p class="artwork-medium">Clay/Wood/Metal</p>
+                    <p class="artwork-date">2023</p>
+                    <p class="artwork-description">Process and inspiration for this three-dimensional work.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="artist-statement">
+            <h3>Artist Statement</h3>
+            <div class="statement-content">
+                <p>Share your personal perspective on your analog artistic practice. Discuss what draws you to traditional mediums, your creative process, and how this work complements or contrasts with your digital career.</p>
+                <p>This section can include your artistic philosophy, favorite techniques, influences, or how your technical background informs your artistic approach.</p>
+            </div>
+        </div>
+        
+        <div class="creative-process">
+            <h3>Creative Process</h3>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Inspiration</h4>
+                    <p>How ideas form and develop</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Planning</h4>
+                    <p>Sketching and preparation</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Creation</h4>
+                    <p>Bringing ideas to life</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Reflection</h4>
+                    <p>Learning and iteration</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', { body: body }) %>
