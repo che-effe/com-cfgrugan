@@ -8,11 +8,10 @@ const DIST_DIR = path.join(__dirname, '..', 'dist');
 // Files and directories to copy
 const COPY_PATTERNS = [
   { src: 'index.html', dest: 'index.html' },
-  { src: 'css', dest: 'css' },
-  { src: 'js', dest: 'js' },
-  { src: 'images', dest: 'images' },
-  { src: 'video', dest: 'video' },
-  { src: 'public/images', dest: 'public/images', optional: true },
+  { src: 'public/css', dest: 'css' },
+  { src: 'public/js', dest: 'js' },
+  { src: 'public/images', dest: 'images' },
+  { src: 'public/video', dest: 'video' },
   { src: '.nojekyll', dest: '.nojekyll' }
 ];
 

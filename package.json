@@ -1,12 +1,13 @@
 {
-  "name": "christopher-grugan-portfolio",
+  "name": "cf-grugan-portfolio",
   "version": "1.0.0",
-  "description": "Christopher Grugan's Portfolio Website - Full Stack Developer & Digital Artist",
+  "description": "CF Grugan's Portfolio Website - Full Stack Developer & Digital Artist",
   "main": "index.html",
   "scripts": {
     "start": "node server.js",
     "dev": "python3 -m http.server 8000",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build-static.js",
+    "build:simple": "node scripts/build.js",
     "preview": "cd dist && python3 -m http.server 8000",
     "clean": "rm -rf dist",
     "deploy": "npm run build && gh-pages -d dist",
@@ -22,7 +23,7 @@
     "html",
     "github-pages"
   ],
-  "author": "Christopher Grugan",
+  "author": "CF Grugan",
   "license": "MIT",
   "repository": {
     "type": "git",
