@@ -43,11 +43,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v3
       with:
-<<<<<<< HEAD
         github_token: ${{ secrets.GH_TOKEN }}
-=======
-        github_token: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> main
         publish_dir: ./public
         # Note: This deploys static files only. For full Express app deployment,
         # consider using services like Heroku, Vercel, or Railway
