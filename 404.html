@@ -1,94 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
-    <meta name="description" content="Personal portfolio showcasing career achievements, dev community work, digital projects, and analog art">
-    <link rel="stylesheet" href="css/main.css?v=1769966373386">
-    <link rel="stylesheet" href="css/components.css?v=1769966373386">
-    <link rel="stylesheet" href="css/responsive.css?v=1769966373386">
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages redirect handling
+        // This script checks if the current path should redirect to a static HTML file
+        
+        const path = window.location.pathname;
+        const routes = {
+            '/career': '/career.html',
+            '/community': '/community.html', 
+            '/digital': '/digital.html',
+            '/analog': '/analog.html',
+            '/bio': '/bio.html',
+            '/articles': '/articles.html',
+            '/events': '/events.html'
+        };
+        
+        const redirect = routes[path];
+        if (redirect) {
+            window.location.replace(redirect + window.location.search + window.location.hash);
+        } else {
+            // If no redirect found, go to home page
+            window.location.replace('/' + window.location.search + window.location.hash);
+        }
+    </script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <h1><a href="index.html">CF Grugan</a></h1>
-                </div>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link ">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="bio.html" class="nav-link ">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="career.html" class="nav-link ">Career</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="articles.html" class="nav-link ">Articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="community.html" class="nav-link ">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="digital.html" class="nav-link ">Digital Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="analog.html" class="nav-link ">Analog Art</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main">
-        
-<section class="error-page">
-    <div class="container">
-        <div class="error-content">
-            <h2 class="error-title">404</h2>
-            <h3 class="error-subtitle">Page Not Found</h3>
-            <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
-            <div class="error-actions">
-                <a href="index.html" class="btn btn-primary">Go Home</a>
-                <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
-            </div>
-        </div>
-        <div class="error-suggestions">
-            <h4>Try these instead:</h4>
-            <ul>
-                <li><a href="career.html">View Career Achievements</a></li>
-                <li><a href="community.html">Explore Community Work</a></li>
-                <li><a href="digital.html">See Digital Projects</a></li>
-                <li><a href="analog.html">Browse Analog Art</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2026 Your Portfolio. All rights reserved.</p>
-            <div class="social-links">
-                <!-- Add your social media links here -->
-                <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
-                <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" class="social-link" aria-label="Email">Email</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js?v=1769966373386"></script>
-    <script src="js/router.js?v=1769966373386"></script>
+    <p>Redirecting...</p>
 </body>
 </html>
