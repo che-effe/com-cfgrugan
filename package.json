@@ -10,7 +10,7 @@
     "build:simple": "node scripts/build.js",
     "preview": "cd dist && python3 -m http.server 8000",
     "clean": "rm -rf dist",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist --cname www.cfgrugan.com",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -29,7 +29,7 @@
     "type": "git",
     "url": "https://github.com/che-effe/com.cfgrugan.git"
   },
-  "homepage": "https://che-effe.github.io/com.cfgrugan/",
+  "homepage": "https://www.cfgrugan.com",
   "dependencies": {
     "express": "^4.18.2",
     "ejs": "^3.1.9"
