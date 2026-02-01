@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
-    <title>404 - Page Not Found</title>
+    <title>Articles &amp; Writing</title>
     <meta name="description" content="Personal portfolio showcasing career achievements, dev community work, digital projects, and analog art">
-    <link rel="stylesheet" href="css/main.css?v=1769990113125">
-    <link rel="stylesheet" href="css/components.css?v=1769990113125">
-    <link rel="stylesheet" href="css/responsive.css?v=1769990113125">
+    <link rel="stylesheet" href="css/main.css?v=1769990113123">
+    <link rel="stylesheet" href="css/components.css?v=1769990113123">
+    <link rel="stylesheet" href="css/responsive.css?v=1769990113123">
     <!-- Paste this right before your closing </head> tag -->
 <script type="text/javascript">
   (function(e,c){if(!c.__SV){var l,h;window.mixpanel=c;c._i=[];c.init=function(q,r,f){function t(d,a){var g=a.split(".");2==g.length&&(d=d[g[0]],a=g[1]);d[a]=function(){d.push([a].concat(Array.prototype.slice.call(arguments,0)))}}var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";b.people=b.people||[];b.toString=function(d){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);d||(a+=" (stub)");return a};b.people.toString=function(){return b.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders start_session_recording stop_session_recording people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
@@ -48,7 +48,7 @@
                         <a href="career.html" class="nav-link ">Career</a>
                     </li>
                     <li class="nav-item">
-                        <a href="articles.html" class="nav-link ">Articles</a>
+                        <a href="articles.html" class="nav-link active">Articles</a>
                     </li>
                     <li class="nav-item">
                         <a href="community.html" class="nav-link ">Community</a>
@@ -66,25 +66,77 @@
 
     <main class="main">
         
-<section class="error-page">
+<section class="page-header">
     <div class="container">
-        <div class="error-content">
-            <h2 class="error-title">404</h2>
-            <h3 class="error-subtitle">Page Not Found</h3>
-            <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
-            <div class="error-actions">
-                <a href="index.html" class="btn btn-primary">Go Home</a>
-                <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
-            </div>
+        <h2 class="page-title">Articles & Writing</h2>
+        <p class="page-subtitle">Technical articles, tutorials, and thought pieces I've written and contributed to</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <!-- <div class="articles-filter">
+            <button class="filter-btn active" data-filter="all">All Articles</button>
+            <button class="filter-btn" data-filter="technical">Technical</button>
+            <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+            <button class="filter-btn" data-filter="opinion">Opinion</button>
+            <button class="filter-btn" data-filter="guest">Guest Posts</button>
+        </div> -->
+        
+        <div class="articles-grid">
+            <article class="article-card" data-category="tutorials">
+                <div class="article-meta">
+                    <span class="article-date">January 18 2018</span>
+                    <span class="article-platform">Javascript january</span>
+                </div>
+                <h3 class="article-title">
+                    <a href="https://www.javascriptjanuary.com/blog/writing-js-apps-for-fitbit-ionic" target="_blank">Writing JS apps for Fitbit</a>
+                </h3>
+                <p class="article-excerpt">
+                    Utilizing javascript to build applications for Fitbit's wearable devices, focusing on location data and tracking functionalities.
+                </p>
+                <div class="article-tags">
+                    <span class="tag">Technical</span>
+                    <span class="tag">Geolocation and tracking</span>
+                    <span class="tag">Tutorials</span>
+                </div>
+                <div class="article-stats">
+                    <span>5 min read</span>
+                    <span>•</span>
+                    <span>1.2k views</span>
+                </div>
+            </article>
+            
+            <article class="article-card" data-category="tutorials">
+                <div class="article-meta">
+                    <span class="article-date">December 2023</span>
+                    <span class="article-platform">Dev Community</span>
+                </div>
+                <h3 class="article-title">
+                    <a href="https://stackoverflow.com/users/1549618/cfg" target="_blank">Stack Overflow Contributions</a>
+                </h3>
+                <p class="article-excerpt">
+                    Status and answers provided on Stack Overflow, helping developers solve problems related to web development, accessibility, and best practices.
+                </p>
+                <div class="article-tags">
+                    <span class="tag">Accessibility</span>
+                    <span class="tag">Tutorial</span>
+                    <span class="tag">UI/UX</span>
+                </div>
+                <div class="article-stats">
+                    <span>12 min read</span>
+                    <span>•</span>
+                    <span>2.8k views</span>
+                </div>
+            </article>
+            
+            
         </div>
-        <div class="error-suggestions">
-            <h4>Try these instead:</h4>
-            <ul>
-                <li><a href="career.html">View Career Achievements</a></li>
-                <li><a href="community.html">Explore Community Work</a></li>
-                <li><a href="digital.html">See Digital Projects</a></li>
-                <li><a href="analog.html">Browse Analog Art</a></li>
-            </ul>
+        
+        <div class="articles-cta">
+            <h3>Want to Collaborate?</h3>
+            <p>I'm always interested in contributing to publications, guest posting, or collaborating on technical content. Feel free to reach out if you'd like to work together.</p>
+            <a href="mailto:charles.grugan@gmail.com" class="btn btn-primary">Get in Touch</a>
         </div>
     </div>
 </section>
@@ -103,7 +155,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=1769990113125"></script>
-    <script src="js/router.js?v=1769990113125"></script>
+    <script src="js/main.js?v=1769990113123"></script>
+    <script src="js/router.js?v=1769990113123"></script>
 </body>
 </html>

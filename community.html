@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
-    <title>404 - Page Not Found</title>
+    <title>Dev Community</title>
     <meta name="description" content="Personal portfolio showcasing career achievements, dev community work, digital projects, and analog art">
-    <link rel="stylesheet" href="css/main.css?v=1769990113125">
-    <link rel="stylesheet" href="css/components.css?v=1769990113125">
-    <link rel="stylesheet" href="css/responsive.css?v=1769990113125">
+    <link rel="stylesheet" href="css/main.css?v=1769990113119">
+    <link rel="stylesheet" href="css/components.css?v=1769990113119">
+    <link rel="stylesheet" href="css/responsive.css?v=1769990113119">
     <!-- Paste this right before your closing </head> tag -->
 <script type="text/javascript">
   (function(e,c){if(!c.__SV){var l,h;window.mixpanel=c;c._i=[];c.init=function(q,r,f){function t(d,a){var g=a.split(".");2==g.length&&(d=d[g[0]],a=g[1]);d[a]=function(){d.push([a].concat(Array.prototype.slice.call(arguments,0)))}}var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";b.people=b.people||[];b.toString=function(d){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);d||(a+=" (stub)");return a};b.people.toString=function(){return b.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders start_session_recording stop_session_recording people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
@@ -51,7 +51,7 @@
                         <a href="articles.html" class="nav-link ">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a href="community.html" class="nav-link ">Community</a>
+                        <a href="community.html" class="nav-link active">Community</a>
                     </li>
                     <li class="nav-item">
                         <a href="digital.html" class="nav-link ">Digital</a>
@@ -66,25 +66,77 @@
 
     <main class="main">
         
-<section class="error-page">
+<section class="page-header">
     <div class="container">
-        <div class="error-content">
-            <h2 class="error-title">404</h2>
-            <h3 class="error-subtitle">Page Not Found</h3>
-            <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
-            <div class="error-actions">
-                <a href="index.html" class="btn btn-primary">Go Home</a>
-                <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
+        <h2 class="page-title">Dev Community Involvement</h2>
+        <p class="page-subtitle">Contributing to the developer community through various initiatives</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="community-grid">
+            <div class="community-item">
+                <div class="community-icon">📝</div>
+                <h3>Technical Writing</h3>
+                <p>Sharing knowledge through blog posts, tutorials, and documentation.</p>
+                <ul>
+                    <li>Published articles on various platforms</li>
+                    <li>Technical tutorials and guides</li>
+                    <li>Documentation contributions</li>
+                </ul>
+                <a href="articles.html" class="btn btn-outline">View Articles</a>
+            </div>
+            
+            <div class="community-item">
+                <div class="community-icon">🔓</div>
+                <h3>Open Source</h3>
+                <p>Contributing to open source projects and maintaining personal repositories.</p>
+                <ul>
+                    <li>Active contributions to major projects</li>
+                    <li>Maintained open source libraries</li>
+                    <li>Bug fixes and feature implementations</li>
+                </ul>
+                <a href="https://github.com/che-effe" class="btn btn-outline">GitHub Profile</a>
+            </div>
+            
+            <div class="community-item">
+                <div class="community-icon">🎤</div>
+                <h3>Speaking & Mentoring</h3>
+                <p>Sharing expertise through talks, workshops, and mentoring programs.</p>
+                <ul>
+                    <li>Conference presentations</li>
+                    <li>Workshop facilitation</li>
+                    <li>Mentoring junior developers</li>
+                </ul>
+                <a href="events.html" class="btn btn-outline">View Events & Speaking</a>
+            </div>
+            
+            <div class="community-item">
+                <div class="community-icon">🌐</div>
+                <h3>Community Building</h3>
+                <p>Organizing events and building developer communities.</p>
+                <ul>
+                    <li>Local meetup organization</li>
+                    <li>Online community management</li>
+                    <li>Event planning and coordination</li>
+                </ul>
+                <a href="events.html" class="btn btn-outline">See All Events</a>
             </div>
         </div>
-        <div class="error-suggestions">
-            <h4>Try these instead:</h4>
-            <ul>
-                <li><a href="career.html">View Career Achievements</a></li>
-                <li><a href="community.html">Explore Community Work</a></li>
-                <li><a href="digital.html">See Digital Projects</a></li>
-                <li><a href="analog.html">Browse Analog Art</a></li>
-            </ul>
+        
+        <div class="testimonials">
+            <h3>Community Feedback</h3>
+            <div class="testimonial-grid">
+                <blockquote class="testimonial">
+                    <p>"Add testimonials from community members or colleagues here..."</p>
+                    <cite>— Community Member</cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"Another testimonial about your community contributions..."</p>
+                    <cite>— Fellow Developer</cite>
+                </blockquote>
+            </div>
         </div>
     </div>
 </section>
@@ -103,7 +155,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=1769990113125"></script>
-    <script src="js/router.js?v=1769990113125"></script>
+    <script src="js/main.js?v=1769990113119"></script>
+    <script src="js/router.js?v=1769990113119"></script>
 </body>
 </html>
