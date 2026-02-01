@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "node server.js",
-    "dev": "python3 -m http.server 8000",
+    "dev": "node server.js",
     "build": "node scripts/build-static.js",
     "build:simple": "node scripts/build.js",
     "preview": "cd dist && python3 -m http.server 8000",

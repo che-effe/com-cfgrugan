@@ -10,7 +10,8 @@ class StaticRouter {
             '/digital': 'digital.html',
             '/analog': 'analog.html',
             '/bio': 'bio.html',
-            '/articles': 'articles.html'
+            '/articles': 'articles.html',
+            '/events': 'events.html'
         };
         
         this.init();
@@ -101,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             '/digital': '/digital.html',
             '/analog': '/analog.html',
             '/bio': '/bio.html',
-            '/articles': '/articles.html'
+            '/articles': '/articles.html',
+            '/events': '/events.html'
         };
         
         const htmlPath = routes[path];

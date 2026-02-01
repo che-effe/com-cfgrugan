@@ -26,6 +26,7 @@ const ROUTES = [
   { path: '/analog', template: 'analog', title: 'Analog Art', page: 'analog', filename: 'analog.html' },
   { path: '/bio', template: 'bio', title: 'About Me', page: 'bio', filename: 'bio.html' },
   { path: '/articles', template: 'articles', title: 'Articles & Writing', page: 'articles', filename: 'articles.html' },
+  { path: '/events', template: 'events', title: 'Events & Speaking', page: 'events', filename: 'events.html' },
   { path: '/404', template: '404', title: '404 - Page Not Found', page: '404', filename: '404.html' }
 ];
 
@@ -107,6 +108,7 @@ function processHtmlForStatic(html, routePath) {
     processedHtml = processedHtml.replace(/href="\/analog"/g, 'href="analog.html"');
     processedHtml = processedHtml.replace(/href="\/bio"/g, 'href="bio.html"');
     processedHtml = processedHtml.replace(/href="\/articles"/g, 'href="articles.html"');
+    processedHtml = processedHtml.replace(/href="\/events"/g, 'href="events.html"');
   } else {
     // For root page, use relative paths
     processedHtml = processedHtml.replace(/href="\/career"/g, 'href="career.html"');
@@ -115,7 +117,14 @@ function processHtmlForStatic(html, routePath) {
     processedHtml = processedHtml.replace(/href="\/analog"/g, 'href="analog.html"');
     processedHtml = processedHtml.replace(/href="\/bio"/g, 'href="bio.html"');
     processedHtml = processedHtml.replace(/href="\/articles"/g, 'href="articles.html"');
+    processedHtml = processedHtml.replace(/href="\/events"/g, 'href="events.html"');
   }
+  
+  // Inject router script for static hosting only
+  processedHtml = processedHtml.replace(
+    '<script src="js/main.js"></script>',
+    '<script src="js/main.js"></script>\n    <script src="js/router.js"></script>'
+  );
   
   return processedHtml;
 }
