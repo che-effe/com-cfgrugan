@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages redirect handling
+        // This script checks if the current path should redirect to a static HTML file
+        
+        const path = window.location.pathname;
+        const routes = {
+            '/career': '/career.html',
+            '/community': '/community.html', 
+            '/digital': '/digital.html',
+            '/analog': '/analog.html',
+            '/bio': '/bio.html',
+            '/articles': '/articles.html',
+            '/events': '/events.html'
+        };
+        
+        const redirect = routes[path];
+        if (redirect) {
+            window.location.replace(redirect + window.location.search + window.location.hash);
+        } else {
+            // If no redirect found, go to home page
+            window.location.replace('/' + window.location.search + window.location.hash);
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

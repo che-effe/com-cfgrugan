@@ -61,6 +61,13 @@ app.get('/articles', (req, res) => {
     });
 });
 
+app.get('/events', (req, res) => {
+    res.render('events', {
+        title: 'Events & Speaking',
+        page: 'events'
+    });
+});
+
 // Error handling
 app.use((req, res) => {
     res.status(404).render('404', {
