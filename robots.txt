@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://che-effe.github.io/com.cfgrugan/sitemap.xml
