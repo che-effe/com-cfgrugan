@@ -1,0 +1,10 @@
+# Redirect all routes to appropriate HTML files
+/career /career.html 200
+/community /community.html 200
+/digital /digital.html 200
+/analog /analog.html 200
+/bio /bio.html 200
+/articles /articles.html 200
+
+# Fallback to 404
+/* /404.html 404
