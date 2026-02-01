@@ -79,9 +79,147 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Image Lightbox Modal
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoSource = document.getElementById('modalVideoSource');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMedium = document.getElementById('modalMedium');
+    const modalDate = document.getElementById('modalDate');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalTags = document.getElementById('modalTags');
+    const modalLinks = document.getElementById('modalLinks');
+    const modalClose = document.querySelector('.modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+
+    // Open modal when gallery item is clicked (Analog Art Page)
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const img = this.querySelector('img');
+            const title = this.querySelector('h3').textContent;
+            const medium = this.querySelector('.artwork-medium')?.textContent || '';
+            const date = this.querySelector('.artwork-date')?.textContent || '';
+            const description = this.querySelector('.artwork-description')?.textContent || '';
+
+            // Set modal content for analog art
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+            modalImage.style.display = 'block';
+            modalVideo.style.display = 'none';
+            
+            modalTitle.textContent = title;
+            if (modalMedium) modalMedium.textContent = medium;
+            if (modalDate) modalDate.textContent = date;
+            modalDescription.textContent = description;
+            
+            // Clear tags and links for analog art
+            if (modalTags) modalTags.innerHTML = '';
+            if (modalLinks) modalLinks.innerHTML = '';
+
+            // Show modal
+            imageModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Open modal when project card is clicked (Digital Work Page)
+    projectCards.forEach(card => {
+        const projectImage = card.querySelector('.project-image');
+        if (projectImage) {
+            projectImage.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const video = this.querySelector('video');
+                const title = card.querySelector('h3').textContent;
+                const description = card.querySelector('p').textContent;
+                const tags = card.querySelectorAll('.tag');
+                const links = card.querySelectorAll('.project-links a');
+
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+
+                // Handle video or image
+                if (video && video.querySelector('source')) {
+                    const videoSrc = video.querySelector('source').src;
+                    modalVideoSource.src = videoSrc;
+                    modalVideo.load();
+                    modalVideo.style.display = 'block';
+                    modalImage.style.display = 'none';
+                    modalVideo.play();
+                } else if (img) {
+                    modalImage.src = img.src;
+                    modalImage.alt = img.alt;
+                    modalImage.style.display = 'block';
+                    modalVideo.style.display = 'none';
+                }
+
+                // Clear and hide medium/date for digital projects
+                if (modalMedium) modalMedium.textContent = '';
+                if (modalDate) modalDate.textContent = '';
+
+                // Add tags
+                if (modalTags) {
+                    modalTags.innerHTML = '';
+                    tags.forEach(tag => {
+                        const tagElement = document.createElement('span');
+                        tagElement.className = 'tag';
+                        tagElement.textContent = tag.textContent;
+                        modalTags.appendChild(tagElement);
+                    });
+                }
+
+                // Add links
+                if (modalLinks) {
+                    modalLinks.innerHTML = '';
+                    links.forEach(link => {
+                        const linkElement = document.createElement('a');
+                        linkElement.href = link.href;
+                        linkElement.target = '_blank';
+                        linkElement.className = link.className;
+                        linkElement.textContent = link.textContent;
+                        modalLinks.appendChild(linkElement);
+                    });
+                }
+
+                // Show modal
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+    });
+
+    // Close modal functions
+    function closeModal() {
+        imageModal.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Pause video if playing
+        if (modalVideo) {
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+        }
+    }
+
+    // Close modal when close button is clicked
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    // Close modal when overlay is clicked
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+
+    // Close modal when escape key is pressed
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && imageModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
     // Art Category Filtering (Analog Art Page)
     const categoryButtons = document.querySelectorAll('.category-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
     categoryButtons.forEach(button => {
         button.addEventListener('click', function() {
