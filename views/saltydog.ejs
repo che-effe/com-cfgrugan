@@ -1,6 +1,10 @@
-<%- include('layout', { title: 'SaltyDog' }) %>
+<% 
+const body = `
 <section class="saltydog-marketing">
   <h1>Welcome to SaltyDog</h1>
   <p>This is the marketing destination for the SaltyDog application. Add your product highlights, features, and call-to-action here.</p>
   <a href="/saltydog/support" class="btn">Get Support</a>
 </section>
+`;
+%>
+<%- include('layout', { body: body }) %>
