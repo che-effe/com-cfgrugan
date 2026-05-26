@@ -17,6 +17,14 @@ app.get('/', (req, res) => {
         title: 'Portfolio - Home',
         page: 'home'
     });
+    // SaltyDog routes
+    app.get('/saltydog', (req, res) => {
+      res.render('saltydog');
+    });
+
+    app.get('/saltydog/support', (req, res) => {
+      res.render('saltydog-support');
+    });
 });
 
 app.get('/career', (req, res) => {
