@@ -13,10 +13,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Portfolio - Home',
-        page: 'home'
-    });
+        res.render('index', {
+                title: 'Portfolio - Home',
+                page: 'home'
+        });
 });
 
 app.get('/career', (req, res) => {
@@ -67,7 +67,19 @@ app.get('/events', (req, res) => {
         page: 'events'
     });
 });
+app.get('/saltydog', (req, res) => {
+    res.render('saltydog', {
+        title: 'Salty Dog iOS App',
+        page: 'saltydog'
+    });
+});
 
+app.get('/saltydog/support', (req, res) => {
+    res.render('saltydog-support', {
+        title: 'Salty Dog iOS App Support',
+        page: 'saltydog-support'
+    });
+});
 // Error handling
 app.use((req, res) => {
     res.status(404).render('404', {

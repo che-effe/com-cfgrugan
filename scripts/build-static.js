@@ -27,7 +27,10 @@ const ROUTES = [
   { path: '/bio', template: 'bio', title: 'About Me', page: 'bio', filename: 'bio.html' },
   { path: '/articles', template: 'articles', title: 'Articles & Writing', page: 'articles', filename: 'articles.html' },
   { path: '/events', template: 'events', title: 'Events & Speaking', page: 'events', filename: 'events.html' },
-  { path: '/404', template: '404', title: '404 - Page Not Found', page: '404', filename: '404.html' }
+  { path: '/404', template: '404', title: '404 - Page Not Found', page: '404', filename: '404.html' },
+  // SaltyDog marketing and support pages
+  { path: '/saltydog', template: 'saltydog', title: 'SaltyDog', page: 'saltydog', filename: 'saltydog.html' },
+  { path: '/saltydog/support', template: 'saltydog-support', title: 'SaltyDog Support', page: 'saltydog-support', filename: 'saltydog-support.html' },
 ];
 
 // Utility functions
@@ -212,6 +215,8 @@ function createRedirectsFile() {
 /analog /analog.html 200
 /bio /bio.html 200
 /articles /articles.html 200
+/saltydog /saltydog.html 200
+/saltydog/support /saltydog-support.html 200
 
 # Fallback to 404
 /* /404.html 404`;
